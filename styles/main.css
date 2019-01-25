@@ -11,6 +11,7 @@ html {
 body{
 color: #000;
   font-family: Arial, sans-serif;
+  line-height: 16pt;
 }
 
 p {
@@ -52,9 +53,14 @@ h3 {
 }
 
 #menu {
-    background-color: #FEEAAB;
+
     color: #000;
 }
+
+li {
+  background-color: #FEEAAB;
+}
+
 .main {
     background-color: #16a086;
 }
@@ -71,9 +77,6 @@ h3 {
 
 
 
-footer {
-
-}
 
 
 @media only screen and (min-width: 601px){

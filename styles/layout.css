@@ -1,7 +1,7 @@
 
 body{
   display: grid;
-  grid-template-columns: 1fr;
+
 
 
   color: #000;
@@ -34,12 +34,12 @@ p {
 
 .header {
   grid-area: title;
-  width: 300px;
+  width: 100%;
 }
 
 .header2{
   grid-area: title2;
-  width: 300px;
+  width: 100%;
 } 
 
 
@@ -51,12 +51,12 @@ p {
 
 .header3 {
   grid-area:title3;
-  width: 300px;
+  width: 100%;
 }
 
 .header4 {
   grid-area:title4;
-  width:600px;
+  width:100%;
   margin-left: 25px;
   margin-right: 25px;
   display:none;
@@ -80,7 +80,7 @@ p {
 
 .main{
   grid-area: main;
-  width: 300px;
+  width: 100%;
   padding: 7px;
   border: solid black 1px;
   margin-bottom: 10px;
@@ -90,8 +90,8 @@ p {
 
 .main2{
   grid-area: main2;
-  width: 300px;
-  
+  width: 100%;
+  padding: 7px;
   border: solid black 1px;
   margin-bottom: 10px;
   background-color: #FEEAAB;
@@ -101,8 +101,8 @@ p {
 
 .main3{
   grid-area: main3;
-  width: 300px;
-
+  width: 100%;
+  padding: 7px;
   background-color: #FBFAF5;
   border: solid black 1px;
 
@@ -111,7 +111,7 @@ p {
 
 .main4{
   grid-area: main4;
-  width: 300px;
+  width: 100%;
 
   padding: 7px;
   background-color: #FEEAAB;
@@ -121,7 +121,7 @@ p {
 
 .main5{
   grid-area: main5;
-  width: 300px;
+  width: 100%;
   padding: 7px;
   background-color: #FBFAF5;
   border: solid black 1px;
@@ -130,7 +130,7 @@ p {
 
 .main6{
   grid-area: main6;
-  width: 300px;
+  width: 100%;
   padding: 7px;
   background-color: #FEEAAB;
   border: solid black 1px;
@@ -139,7 +139,8 @@ p {
 
 .main7{
   grid-area: main7;
-  width: 300px;
+  width: 100%;
+  padding: 7px;
   background-color: #FBFAF5;
   border: solid black 1px;
   overflow: auto;
@@ -152,7 +153,7 @@ p {
 
 .main8{
   grid-area: main8;
-  width: 300px;
+  width: 100%;
   padding: 7px;
   background-color: #FBFAF5;
   border: solid black 1px;
@@ -166,7 +167,7 @@ p {
 
 #menu {
   grid-area: menu;
-  width: 300px;
+  width: 100%;
 }
 
 .ad1 {
@@ -238,23 +239,30 @@ header {
 
 .active {
   max-height: 400px;
-  transition: max-height 2s;
 
 }
 
 .inactive {
-  max-height: 0px;
-  transition: max-height 2s;
+  display: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 90%;
+
 }
 
 
 
 
-
-@media only screen and (min-width: 650px){
+@media only screen and (min-width: 650px) and (max-width: 999px) {
   body{
     display: grid;
-    grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px);
+    grid-template-columns: fit-content(500px) fit-content(500px) ;
     grid-gap: 10px;
     grid-template-areas: 
           "title4 title4 "
@@ -300,7 +308,11 @@ header {
 }
 
 .header4 {
-  display: inline;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  max-width: 65%;
 }
 
 .header5 {
@@ -314,7 +326,11 @@ header {
 .menubuttons {
   display: block;
   grid-area: buttons;
+
 }
+
+
+
 
   .active, .inactive {
     max-height: unset;
@@ -322,44 +338,64 @@ header {
 
   .header{
     grid-area: title;
-    width: 33%;
+    width: 100%;
   } 
   
   .main{
     grid-area: main;
+    width: 100%;
 
   }
   
   .main2{
     grid-area: main2;
+    width: 100%;
 
   }
   
   .main3{
     grid-area: main3;
+    width: 100%;
   }
 
   .main4{
     grid-area: main4;
+    width: 100%;
   }
   
   .main5{
     grid-area: main5;
+    width: 100%;
   }
   .main6{
     grid-area: main6;
+    width: 100%;
   }
   .main7{
     grid-area: main7;
+    width: 100%;
   }
   .main8{
     grid-area: main8;
+    width: 100%;
   }
+
   
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 90%;
 
   }
 
-  @media only screen and (min-width: 1000px){
+
+
+  }
+
+  @media only screen and (min-width: 1000px) and (max-width: 1199px){
     body{
       display: grid;
       grid-template-columns: fit-content(300px) fit-content(300px)fit-content(300px) fit-content(300px);
@@ -429,44 +465,58 @@ header {
     
     .main{
       grid-area: main;
-      width: 465px;
+      width: 100%;
   
     }
     
     .main2{
       grid-area: main2;
-      width: 465px;
+      width: 100%;
   
     }
     
     .main3{
       grid-area: main3;
-      width: 465px;
+      width: 100%;
     }
   
     .main4{
       grid-area: main4;
-      width: 465px;
+      width: 100%;
     }
     
     .main5{
       grid-area: main5;
-      width: 465px;
+      width: 100%;
     }
     .main6{
       grid-area: main6;
-      width: 465px;
+      width: 100%;
     }
     .main7{
       grid-area: main7;
-      width: 465px;
+      width: 100%;
 
     }
 
 
     .main8{
       grid-area: main8;
-      width: 465px;
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      width: 90%;
+
+    }
+
+    .header {
+      width: 60%;
     }
     
   
@@ -476,8 +526,9 @@ header {
   @media only screen and (min-width: 1200px){
     body{
       display: grid;
-      grid-template-columns: fit-content(300px) fit-content(300px)fit-content(300px) fit-content(300px);
-      grid-template-rows: fit-content(300px) fit-content(300px) fit-content(300px) fit-content(300px) ;
+      justify-content: center;
+      grid-template-columns: fit-content(400px) fit-content(400px)fit-content(400px) fit-content(400px);
+      grid-template-rows: fit-content(400px) fit-content(400px) fit-content(400px) fit-content(400px) ;
       grid-gap: 10px;
       grid-template-areas: 
             "title4 title4 title4   header5  "
@@ -488,6 +539,7 @@ header {
             "main2 main2 main6 main6 "
             "main3 main3 main7 main7 "
             "main4 main4 main8 main8 "
+      
   
     }
     nav ul li {
@@ -505,6 +557,10 @@ header {
   
   #menu {
     display: none;
+  }
+
+  .header {
+    width: 60%;
   }
 
   .header3 {
@@ -538,7 +594,7 @@ header {
   
     .header{
       grid-area: title;
-      width: 33%;
+      width: 70%;
     } 
     
     .main{
@@ -582,6 +638,16 @@ header {
     .main8{
       grid-area: main8;
       width: 565px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      width: 90%;
+
     }
     
   
